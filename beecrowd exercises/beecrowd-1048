@@ -1,0 +1,18 @@
+#ler o salário
+salario = eval(input())
+
+#calcular e mostrar o novo salário reajustado
+#o valor de reajusta ganho (diferença)
+#e o índice reajustado em percentual
+#print(f'Novo salário: {} \n Reajuste ganho: {} \n Em percentual %')
+
+if salario > 2000.00 :
+    print(f'Novo salário: {salario*1.04:.2f} \nReajuste ganho: {(salario*1.04) - salario:.2f} \nEm percentual: 4 %')
+elif (salario > 1200.01 and salario <= 2000.00):
+    print(f'Novo salário: {salario*1.07:.2f} \nReajuste ganho: {(salario*1.07) - salario:.2f} \nEm percentual: 7 %')
+elif (salario <= 1200.00 and salario >= 800.01):
+    print(f'Novo salário: {salario * 1.10:.2f} \nReajuste ganho: {(salario * 1.1) - salario:.2f} \nEm percentual: 10 %')
+elif (salario <= 800.00 and salario >= 400.01):
+    print(f'Novo salário: {salario * 1.12:.2f} \nReajuste ganho: {(salario * 1.12) - salario:.2f} \nEm percentual: 12 %')
+elif (salario <= 400.00):
+    print(f'Novo salário: {salario * 1.15:.2f} \nReajuste ganho: {(salario * 1.15) - salario:.2f} \nEm percentual: 15 %')
