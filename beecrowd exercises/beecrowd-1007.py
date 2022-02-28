@@ -5,3 +5,4 @@ d = eval(input())
 
 dif = ((a*b) - (c*d))
 print(f'DIFERENCA = {dif}')
+
