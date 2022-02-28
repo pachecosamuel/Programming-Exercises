@@ -7,3 +7,4 @@ cod2, qtd2, preco2 = l2
 total = (int(qtd1) * float(preco1)) + (int(qtd2)*float(preco2))
 
 print(f'VALOR A PAGAR: R$ {total:.2f}')
+
