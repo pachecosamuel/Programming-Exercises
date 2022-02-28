@@ -8,3 +8,4 @@ for i in qtdtime:
     time -= qtd * i
 
 print(f'{result[0]}:{result[1]}:{result[2]}')
+
