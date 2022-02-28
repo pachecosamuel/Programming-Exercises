@@ -7,3 +7,5 @@ for i in x:
     cont = valor // i
     print(f'{cont} nota(s) de R$ {i},00')
     valor -= cont * i
+
+    
