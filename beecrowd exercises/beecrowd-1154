@@ -1,0 +1,13 @@
+soma = 0
+cont = 0
+
+while True:
+    aux = int(input())
+
+    if aux < 0:
+        break
+    else:
+        cont += 1
+        soma += aux
+
+print(f"{soma/cont:.2f}")
