@@ -1,19 +1,47 @@
-package br.org.serratec;
+package br.org.serratec.exceptions;
 
 public class ContaCorrente implements Conta {
 
-	private double saldo, taxa;
+	private String numeroConta, titular;
+	public double saldo;
+	
+	public ContaCorrente(String numeroConta, String titular, double saldo) {
+		super();
+		this.numeroConta = numeroConta;
+		this.titular = titular;
+		this.saldo = saldo;
+	}
 	
 	@Override
-	public void saque(double valor) {
-		if (saldo >= valor) {
-			saldo -= valor - taxa;
-		}
+	public String toString() {
+		return "ContaCorrente [numeroConta=" + numeroConta + ", titular=" + titular + ", saldo=" + saldo + "]";
+	}
+
+	
+	public String getNumeroConta() {
+		return numeroConta;
+	}
+
+	public String getTitular() {
+		return titular;
+	}
+
+	public double getSaldo() {
+		return saldo;
 	}
 
 	@Override
-	public void deposito(double valor) {
+	public boolean saque(double valor) {
+		if(saldo < valor) {
+			throw new ContaExcepetion("Saldo insuficiente! ");
+		}
+		return true;
+	}
+
+	@Override
+	public boolean deposito(double valor) {
 		saldo += valor;
+		return true;
 	}
 
 }

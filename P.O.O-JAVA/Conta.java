@@ -1,8 +1,8 @@
-package br.org.serratec;
+package br.org.serratec.exceptions;
 
 public interface Conta {
-		
-	void saque(double valor);
-	void deposito(double valor);
-		
+
+	public boolean saque(double valor);
+	public boolean deposito(double valor);
+	
 }
