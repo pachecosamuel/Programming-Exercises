@@ -1,44 +1,37 @@
 package br.org.serratec;
 
-public class Pessoa {
+public abstract class Pessoa {
 
-	private String cpf, nome, email;
+	protected String endereco, nome;
+	protected double rendimentos;
 
-	public Pessoa(String cpf, String nome, String email) {
+	public Pessoa(String endereco, String nome, double rendimentos) {
 		super();
-		this.cpf = cpf;
+		this.endereco = endereco;
 		this.nome = nome;
-		this.email = email;
+		this.rendimentos = rendimentos;
 	}
 
-	public String getCpf() {
-		return cpf;
+	public double getRendimentos() {
+		return rendimentos;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setRendimentos(double rendimentos) {
+		this.rendimentos = rendimentos;
+	}
+
+	public String getEndereco() {
+		return endereco;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 	@Override
 	public String toString() {
-		return "Pessoa [cpf=" + cpf + ", nome=" + nome + ", email=" 
-				+ email + "]";
+		return "Pessoa [endereco=" + endereco + ", nome=" + nome
+				+ super.toString() + "]";
 	}
 	
 	

@@ -1,30 +1,31 @@
-
-package br.com.senai.model;
+package br.org.serratec;
 
 public class Gerente extends Funcionario{
-	private int senha;
-	private int numeroDeFuncionarios;
 
-	public boolean autentica(int senha) {
-		return false;
+	private String tipoGerente;
+
+	public Gerente(String nome, double salario, String tipoGerente) {
+		super(nome, salario);
+		this.tipoGerente = tipoGerente;
 	}
 
-	public int getSenha() {
-		return senha;
+	public String getTipoGerente() {
+		return tipoGerente;
 	}
 
-	public void setSenha(int senha) {
-		this.senha = senha;
-	}
-
-	public int getNumeroDeFuncionarios() {
-		return numeroDeFuncionarios;
-	}
-
-	public void setNumeroDeFuncionarios(int numeroDeFuncionarios) {
-		this.numeroDeFuncionarios = numeroDeFuncionarios;
+	public void setTipoGerente(String tipoGerente) {
+		this.tipoGerente = tipoGerente;
 	}
 	
+	@Override
+	public String toString() {
+		return "Gerente [tipoGerente=" + tipoGerente +  super.toString() + "]";
+	}
+
+	@Override
+	public void calcularAumentoSalario() {
+		Salario *= 1.13;
+	}
 	
 	
 }

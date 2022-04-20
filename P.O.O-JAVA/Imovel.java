@@ -1,30 +1,29 @@
 package br.org.serratec;
 
-public class Imovel {
-
-	private String tipo;
-	private double valor;
-	private Pessoa dono;
+public abstract class Imovel {
 	
-	public Imovel(String tipo, double valor, Pessoa dono) {
+	private String local;
+	private double valor;
+	
+	public Imovel(String local, double valor) {
 		super();
-		this.tipo = tipo;
+		this.local = local;
 		this.valor = valor;
-		this.dono = dono;
 	}
-
-
-	public String getTipo() {
-		return tipo;
+	public String getLocal() {
+		return local;
 	}
-
 	public double getValor() {
 		return valor;
 	}
-
-	public Pessoa getDono() {
-		return dono;
+	
+	@Override
+	public String toString() {
+		return "Imovel [local=" + local + ", valor=" + valor + "]";
 	}
 	
+	public double calcularITBI() {
+		return valor * 0.035;
+	}
 	
 }

@@ -1,0 +1,23 @@
+package br.org.serratec;
+
+public class Poupanca implements Conta{
+
+	private double saldo;
+	
+	@Override
+	public void saque(double valor) {
+		if (saldo >= valor) {
+			saldo -= valor;
+		}
+		
+	}
+
+	@Override
+	public void deposito(double valor) {
+		saldo += valor;
+		
+	}
+
+	
+	
+}

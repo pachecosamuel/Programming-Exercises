@@ -1,31 +1,37 @@
-package br.com.senai.model;
+package br.org.serratec;
 
-public class PessoaFisica extends ImpostoDeRenda {
+public class PessoaFisica extends Pessoa implements Tributos {
 
-	protected String cpf, rg;
+	protected String cpf;
 
-	public PessoaFisica(String nome, String telefone, String email, double rendimentos, String cpf, String rg) {
-		
-		super(nome, telefone, email, rendimentos);
+	public PessoaFisica(String endereco, String nome, double rendimentos, String cpf) {
+		super(endereco, nome, rendimentos);
 		this.cpf = cpf;
-		this.rg = rg;
 	}
+
 	
-	public double calcularIR() {
-		return this.rendimentos * 0.12;
+	
+	public String getCpf() {
+		return cpf;
+	}
+
+
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+
+
+	@Override
+	public double calculaIR() {
+		return rendimentos * irendaPF;
 	}
 
 	@Override
-	public String toString() {
-		return "PessoaFisica [cpf=" + cpf + ", nome=" + nome + ", rendimentos=" + rendimentos + ", calcularIR()="
-				+ calcularIR() + "]";
+	public double calcularICMS() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
-	
-	
 
-
-	
-
-	
-	
 }
