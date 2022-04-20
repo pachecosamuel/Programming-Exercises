@@ -1,37 +1,38 @@
-package br.org.serratec;
+package br.org.serratec.enumaradores;
 
-public abstract class Pessoa {
+public class Pessoa {
 
-	protected String endereco, nome;
-	protected double rendimentos;
-
-	public Pessoa(String endereco, String nome, double rendimentos) {
+	private String nome, email;
+	private Setor setor;
+	private EstadoCivil estadoCivil;
+	
+	public Pessoa(String nome, String email, Setor setor, EstadoCivil estadoCivil) {
 		super();
-		this.endereco = endereco;
 		this.nome = nome;
-		this.rendimentos = rendimentos;
-	}
-
-	public double getRendimentos() {
-		return rendimentos;
-	}
-
-	public void setRendimentos(double rendimentos) {
-		this.rendimentos = rendimentos;
-	}
-
-	public String getEndereco() {
-		return endereco;
+		this.email = email;
+		this.setor = setor;
+		this.estadoCivil = estadoCivil;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public Setor getSetor() {
+		return setor;
+	}
+
+	public EstadoCivil getEstadoCivil() {
+		return estadoCivil;
+	}
+
 	@Override
 	public String toString() {
-		return "Pessoa [endereco=" + endereco + ", nome=" + nome
-				+ super.toString() + "]";
+		return "Pessoa [nome=" + nome + ", email=" + email + ", setor=" + setor + ", estadoCivil=" + estadoCivil + "]";
 	}
 	
 	
