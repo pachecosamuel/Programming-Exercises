@@ -1,33 +1,34 @@
-package br.com.senai.model;
+package br.org.serratec;
 
-public class Medico {
+public class Medico extends Plano {
 
-	protected String crm, nome;
-	protected double valorConsulta;
-	
-	public Medico(String crm, String nome, double valorConsulta) {
-		super();
+	protected String crm, nomeMedico;
+
+	public Medico(String nome, String crm, String nomeMedico) {
+		super(nome);
 		this.crm = crm;
-		this.nome = nome;
-		this.valorConsulta = valorConsulta;
+		this.nomeMedico = nomeMedico;
 	}
 	
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return "crm: " + crm + "\n" + "nome: " + nome + "\nValor consulta: " + valorConsulta;
-	}
-
 	public String getCrm() {
 		return crm;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getNomeMedico() {
+		return nomeMedico;
 	}
 
-	public double getValorConsulta() {
-		return valorConsulta;
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() + "crm: " + crm + " nome médico: " + nomeMedico;
+	}
+
+	@Override
+	public double calcularPagamento() {
+		valorPago = super.calcularPagamento() * 1.10;
+		return valorPago;
 	}
 	
 	

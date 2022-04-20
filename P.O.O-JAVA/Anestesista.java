@@ -1,23 +1,36 @@
-package br.com.senai.model;
+package br.org.serratec;
 
 public class Anestesista extends Medico {
-		
-	private double valorAnestesia;
 
-	public Anestesista(String crm, String nome, double valorConsulta, double valorAnestesia) {
-		super(crm, nome, valorConsulta);
-		this.valorAnestesia = valorAnestesia;
+	private String tipoAnestesia;
+
+	public Anestesista(String nome, String crm, String nomeMedico, String tipoAnestesia) {
+		super(nome, crm, nomeMedico);
+		this.tipoAnestesia = tipoAnestesia;
 	}
 	
+	public void setTipoAnestesia(String tipoAnestesia) {
+		this.tipoAnestesia = tipoAnestesia;
+	}
+
+	
+
 	@Override
 	public String toString() {
-		return super.toString() + "\nValor da anestesia: " + valorAnestesia;
+		// TODO Auto-generated method stub
+		return super.toString() + "tipo anestesia" + tipoAnestesia;
 	}
 
-	public double getValorAnestesia() {
-		return valorAnestesia;
+	public String getTipoAnestesia() {
+		return tipoAnestesia;
 	}
 
+	@Override
+	public double calcularPagamento() {
+		valorPago = super.calcularPagamento() + 1000;
+		return valorPago;
+	}
+	
 	
 	
 }

@@ -1,43 +1,43 @@
-package org.serratec.model;
+package br.com.senai.model;
 
-import java.awt.EventQueue;
+public class Contato {
+    private String nome;
+    private Telefone[] telefones;
+    private Endereco endereco;
 
-import javax.swing.JFrame;
+    public Contato(String nome, Telefone[] telefones, Endereco endereco) {
+        super();
+        this.nome = nome;
+        this.telefones = telefones;
+        this.endereco = endereco;
+    }
 
-public class teste {
+    public Telefone[] getTelefones() {
+        return telefones;
+    }
 
-	private JFrame frame;
+    public void setTelefones(Telefone[] telefones) {
+        this.telefones = telefones;
+    }
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					teste window = new teste();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+    public String getNome() {
+        return nome;
+    }
 
-	/**
-	 * Create the application.
-	 */
-	public teste() {
-		initialize();
-	}
+    public Endereco getEndereco() {
+        return endereco;
+    }
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
+    public void mostrarTelefone() {
+        for (int i = 0; i < telefones.length; i++) {
+            if (telefones[i] == null) {
+                telefones[i] = telefones;
+                return;
+
+            }
+        }
+    }
+
+
 
 }
