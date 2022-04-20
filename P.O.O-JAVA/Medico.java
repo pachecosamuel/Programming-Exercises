@@ -1,68 +1,34 @@
-package org.serratec.model;
+package br.com.senai.model;
 
 public class Medico {
 
-	private String crm, nome;
-	private double salario, consulta;
-	private static int totalMedicos;
+	protected String crm, nome;
+	protected double valorConsulta;
 	
-	public Medico(String nome, String crm, double salario, double consulta) {
-		this.nome = nome;
+	public Medico(String crm, String nome, double valorConsulta) {
+		super();
 		this.crm = crm;
-		this.salario = salario;
-		this.consulta = consulta;
-		totalMedicos ++;
+		this.nome = nome;
+		this.valorConsulta = valorConsulta;
 	}
 	
-	public void pagamentoDinheiro(double consulta) {
-		salario += consulta;
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "crm: " + crm + "\n" + "nome: " + nome + "\nValor consulta: " + valorConsulta;
 	}
-
-	public void pagamentoPlano(double consulta) {
-		salario += consulta * 0.7;
-	}
-	
-	public static int getTotalMedicos() {
-		return totalMedicos;
-	}
-
-	public static void setTotalMedicos(int totalMedicos) {
-		Medico.totalMedicos = totalMedicos;
-	}
-
 
 	public String getCrm() {
 		return crm;
-	}
-
-	public void setCrm(String crm) {
-		this.crm = crm;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public double getValorConsulta() {
+		return valorConsulta;
 	}
-
-	public double getSalario() {
-		return salario;
-	}
-
-	public void setSalario(double salario) {
-		this.salario = salario;
-	}
-
-	public double getConsulta() {
-		return consulta;
-	}
-
-	public void setConsulta(double consulta) {
-		this.consulta = consulta;
-	}
-	
 	
 	
 	

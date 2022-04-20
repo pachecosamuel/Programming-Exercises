@@ -1,21 +1,15 @@
-package org.serratec.model;
+package br.com.senai.model;
 
 public class TesteMedico {
 
 	public static void main(String[] args) {
-		
-		Medico p1 = new Medico("Samuel", "0174", 40000.00, 200.00);
-		Medico p2 = new Medico("André", "0432", 45050.00, 230.90);
 
-		p1.pagamentoDinheiro(200);
-		p2.pagamentoPlano(230.90);
+		Anestesista m1 = new Anestesista("123", "Samuel", 220.0 , 1000);
+		Medico m2 = new Medico("456", "André", 250.00);
 		
-		
-		System.out.println("Médico: " + p1.getNome() + " CRM: " + p1.getCrm() + "\n");
-		System.out.println("Médico: " + p2.getNome() + " CRM: " + p2.getCrm() + "\n");
-
-		
-		System.out.println("O n° total de médicos é: " + Medico.getTotalMedicos());
+		System.out.println(m1);
+		System.out.println();
+		System.out.println(m2);
 		
 	}
 

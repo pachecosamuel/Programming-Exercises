@@ -1,30 +1,21 @@
-package org.serratec.model;
+package br.com.senai.model;
 
 public class Funcionario {
-
-	private String name;
+	
+	private String cpf, nome;
 	private double salario;
-	private static int qtdFuncionarios;
 	
-	public Funcionario(String name, double salario) {
-		this.name = name;
-		this.salario = salario;
-		qtdFuncionarios++;
+	public String getCpf() {
+		return cpf;
 	}
-	
-	public static int getQtdFuncionarios() {
-		return qtdFuncionarios;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
-
-	public static void setQtdFuncionarios(int qtdFuncionarios) {
-		Funcionario.qtdFuncionarios = qtdFuncionarios;
+	public String getNome() {
+		return nome;
 	}
-
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public double getSalario() {
 		return salario;
@@ -33,16 +24,6 @@ public class Funcionario {
 		this.salario = salario;
 	}
 	
-	public double calcularINSS(double salario) {
-		return salario * 0.11;
-	}
-	
-	public double calcularVT(double salario) {
-		return salario * 0.06;
-	}
-
-	
-	
-	
-	
 }
+
+
