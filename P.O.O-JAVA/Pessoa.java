@@ -1,17 +1,20 @@
-package br.org.serratec.enumaradores;
+package br.org.serratec;
 
 public class Pessoa {
 
 	private String nome, email;
-	private Setor setor;
-	private EstadoCivil estadoCivil;
+	private int idade;
 	
-	public Pessoa(String nome, String email, Setor setor, EstadoCivil estadoCivil) {
+	public Pessoa(String nome, String email, int idade) {
 		super();
 		this.nome = nome;
 		this.email = email;
-		this.setor = setor;
-		this.estadoCivil = estadoCivil;
+		this.idade = idade;
+	}
+
+	@Override
+	public String toString() {
+		return "Pessoa [nome=" + nome + ", email=" + email + ", idade=" + idade + "]";
 	}
 
 	public String getNome() {
@@ -22,17 +25,8 @@ public class Pessoa {
 		return email;
 	}
 
-	public Setor getSetor() {
-		return setor;
-	}
-
-	public EstadoCivil getEstadoCivil() {
-		return estadoCivil;
-	}
-
-	@Override
-	public String toString() {
-		return "Pessoa [nome=" + nome + ", email=" + email + ", setor=" + setor + ", estadoCivil=" + estadoCivil + "]";
+	public int getIdade() {
+		return idade;
 	}
 	
 	

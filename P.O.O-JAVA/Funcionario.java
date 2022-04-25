@@ -1,40 +1,37 @@
 package br.org.serratec;
 
-public abstract class Funcionario {
+public class Funcionario {
 
-	protected String nome;
-	protected double Salario;
+	private String nome, cargo;
+	private double salario;
 	
-	public Funcionario(String nome, double salario) {
+	public Funcionario(String nome, String cargo, double salario) {
 		super();
 		this.nome = nome;
-		Salario = salario;
+		this.cargo = cargo;
+		this.salario = salario;
 	}
-
+	
 	public String getNome() {
 		return nome;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public void setSalario(double salario) {
-		Salario = salario;
+	public String getCargo() {
+		return cargo;
 	}
 
 	public double getSalario() {
-		return Salario;
+		return salario;
 	}
 
-	
+	public double abono (double valor) {
+		return this.salario += valor;
+	}
 
 	@Override
 	public String toString() {
-		return "[nome=" + nome + ", Salario=" + Salario + "]";
+		return "Funcionario [nome=" + nome + ", cargo=" + cargo + ", salario=" + salario + "]";
 	}
-
-	//Ñ tem implementação, qm implementará serão os filhos.
-	public abstract void calcularAumentoSalario();
+	
 	
 }

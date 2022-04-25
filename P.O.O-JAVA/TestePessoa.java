@@ -1,19 +1,29 @@
-package br.org.serratec.enumaradores;
+package br.org.serratec;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TestePessoa {
 
 	public static void main(String[] args) {
-
-		Pessoa p1 = new Pessoa("Jão", "123@", Setor.RH, EstadoCivil.CASADO);
-
-		System.out.println(p1.toString());
-		System.out.println(p1.getSetor().getSala());
-		System.out.println(p1.getSetor().ordinal());
-		System.out.println(p1.getSetor().valueOf("Contabilidade"));
 		
-		for (EstadoCivil estadoCivil : EstadoCivil.values()) {
-			System.out.println(estadoCivil);
+		Pessoa p1 = new Pessoa("Samuel", "samuel@g", 23);
+		Pessoa p2 = new Pessoa("Ana", "ana@g", 43);
+		Pessoa p3 = new Pessoa("Julio", "julio@g", 29);
+		Cliente c1 = new Cliente("Danubia");
+		
+		List<Pessoa> pessoas = new ArrayList();
+		pessoas.add(p1);
+		pessoas.add(p2);
+		pessoas.add(p3);
+		//pessoas.add(c1);
+		
+		//pessoas.addAll(pessoas);
+		
+		for (Object pessoa : pessoas) {
+			System.out.println(pessoa);
 		}
+
 	}
 
 }

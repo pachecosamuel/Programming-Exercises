@@ -1,35 +1,37 @@
-package org.serratec.model;
+package review.cap.nove;
 
 public class Produto {
-		private int codigo;
-		private String descricao;
-		private double valor;
-		public int getCodigo() {
-			return codigo;
-		}
-		
-		public Produto(int codigo, String descricao, double valor) {
-			this.descricao = descricao;
-			this.codigo = codigo;
-			this.valor = valor;
-			System.out.println("Construtor cheio");
-		}
-		
-		public void setCodigo(int codigo) {
-			this.codigo = codigo;
-		}
-		public String getDescricao() {
-			return descricao;
-		}
-		public void setDescricao(String descricao) {
-			this.descricao = descricao;
-		}
-		public double getValor() {
-			return valor;
-		}
-		public void setValor(double valor) {
-			this.valor = valor;
-		}
-		
-		
+
+	private int codigo;
+	private String descricao;
+	private double preco;
+	private Categoria categoria;
+	
+	public Produto(int codigo, String descricao, double preco, Categoria categoria) {
+		super();
+		this.codigo = codigo;
+		this.descricao = descricao;
+		this.preco = preco;
+		this.categoria = categoria;
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public double getPreco() {
+		return preco;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+	
+	
+	
+	
 }
