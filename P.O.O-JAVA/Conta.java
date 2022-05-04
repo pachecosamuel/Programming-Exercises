@@ -1,8 +1,12 @@
-package br.org.serratec.exceptions;
+package review_16;
 
+@FunctionalInterface
 public interface Conta {
 
-	public boolean saque(double valor);
-	public boolean deposito(double valor);
+	public void transacao();
+	
+	default void investimento() {
+		System.out.println("Investimento efetuado! (Métodozão Default pai)");
+	}
 	
 }

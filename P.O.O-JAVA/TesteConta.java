@@ -1,20 +1,17 @@
-package br.org.serratec.exceptions;
+package review_16;
 
 public class TesteConta {
 
 	public static void main(String[] args) {
 
-		Conta cc = new ContaCorrente("123", "Samuel", 19000);
+		Conta c1 = () -> System.out.println("Transação efetuada com sucesso!");
 		
-		try {
-			cc.deposito(1500);
-			cc.saque(23000);
-		} catch (ContaExcepetion e) {
-			System.out.println(e.getMessage());
-		}
+		c1.transacao();
 		
+		c1.investimento();
 		
-
+		/*Conta c2 = null;
+		c2.transacao();*/
+		
 	}
-
 }
