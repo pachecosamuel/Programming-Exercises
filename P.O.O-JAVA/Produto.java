@@ -1,42 +1,42 @@
-package model;
+package br.org.serratec.model;
 
 public class Produto {
-	
+
 	private Integer codigo;
 	private String nome;
-	private String telefone;
-	private String email;
+	private String descricao;
+	private Double preco;
+	private Integer quantidadeEstoque;
 	
-	public Produto(Integer codigo, String nome, String telefone, String email) {
+	public Produto(Integer codigo, String nome, String descricao, Double preco, Integer quantidadeEstoque) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
-		this.telefone = telefone;
-		this.email = email;
+		this.descricao = descricao;
+		this.preco = preco;
+		this.quantidadeEstoque = quantidadeEstoque;
 	}
-
 	public Integer getCodigo() {
 		return codigo;
 	}
-
 	public String getNome() {
 		return nome;
 	}
-
-	public String getTelefone() {
-		return telefone;
+	public String getDescricao() {
+		return descricao;
 	}
-
-	public String getEmail() {
-		return email;
+	public Double getPreco() {
+		return preco;
 	}
-
+	public Integer getQuantidadeEstoque() {
+		return quantidadeEstoque;
+	}
 	@Override
 	public String toString() {
-		return "Cliente [codigo=" + codigo + ", nome=" + nome + ", telefone=" + telefone + ", email=" + email + "]";
+		return "Produto [codigo=" + codigo + ", nome=" + nome + ", descricao=" + descricao + ", preco=" + preco
+				+ ", quantidadeEstoque=" + quantidadeEstoque + "]";
 	}
 	
 	
 	
-
 }
