@@ -1,37 +1,42 @@
-package review.cap.nove;
+package model;
 
 public class Produto {
-
-	private int codigo;
-	private String descricao;
-	private double preco;
-	private Categoria categoria;
 	
-	public Produto(int codigo, String descricao, double preco, Categoria categoria) {
+	private Integer codigo;
+	private String nome;
+	private String telefone;
+	private String email;
+	
+	public Produto(Integer codigo, String nome, String telefone, String email) {
 		super();
 		this.codigo = codigo;
-		this.descricao = descricao;
-		this.preco = preco;
-		this.categoria = categoria;
+		this.nome = nome;
+		this.telefone = telefone;
+		this.email = email;
 	}
 
-	public int getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	public String getNome() {
+		return nome;
 	}
 
-	public double getPreco() {
-		return preco;
+	public String getTelefone() {
+		return telefone;
 	}
 
-	public Categoria getCategoria() {
-		return categoria;
+	public String getEmail() {
+		return email;
+	}
+
+	@Override
+	public String toString() {
+		return "Cliente [codigo=" + codigo + ", nome=" + nome + ", telefone=" + telefone + ", email=" + email + "]";
 	}
 	
 	
 	
-	
+
 }
