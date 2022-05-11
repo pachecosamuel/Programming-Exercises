@@ -1,0 +1,25 @@
+body{
+	font-family: Helvetica;
+}
+
+table{
+	padding: 3px;
+	width: 900px;
+	border-collapse: collapse;
+}
+
+th{
+	text-align: left;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+
+tr.alternado{
+	background: #efefef;
+}
+
+tr:hover{
+	background: #c3e6e5;
+}

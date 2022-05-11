@@ -1,0 +1,29 @@
+body{
+    text-align: center;
+}
+
+a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    color: rgb(45, 65, 45);
+}
+
+/* a:link{
+    color:rgb(138, 13, 255);
+}
+
+/* a:visited{
+    color: rgb(1, 88, 250);
+} */
+
+/* a:active{
+    color: rgb(203, 247, 11);
+} */ 
+
+a:hover{
+    color: rgb(248, 79, 0);
+}
+
+img{
+    width: 30%;
+}
